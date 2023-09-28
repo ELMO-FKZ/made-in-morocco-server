@@ -13,13 +13,6 @@ const PORT = process.env.PORT || 8000;
 
 connectDB();
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://made-in-morocco.onrender.com');
-    // req.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET, HEAD, OPTIONS');
-    // res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-    next();
-});
-
 app.use(express.urlencoded( {extended: true} ));
 app.use(express.json());
 
