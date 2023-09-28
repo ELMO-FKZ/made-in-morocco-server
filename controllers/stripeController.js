@@ -18,8 +18,8 @@ const checkout = async(req, res) => {
                     quantity: item.amount
                 }
             }),
-            success_url: "http://localhost:5173/success",
-            cancel_url: "http://localhost:5173/cancel"
+            success_url: `${process.env.CLIENT_URL}/success`,
+            cancel_url: `${process.env.CLIENT_URL}/cancel`
         })
         res.json({ url: session.url })
     } catch (error) {
