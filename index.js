@@ -16,7 +16,7 @@ connectDB();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(cors({origin: `https://made-in-morocco.onrender.com/`, credentials: true}))
+app.use(cors({origin: `https://made-in-morocco.onrender.com`, credentials: true}))
 
 // APIs
 app.use("/api", shopRoutes);
