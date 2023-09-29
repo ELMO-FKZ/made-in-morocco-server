@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const connectDB = require("./connectDB");
+const cors = require("cors");
 
 // Routes
 const shopRoutes = require("./routes/shopRoutes");
@@ -13,8 +14,9 @@ const PORT = process.env.PORT || 8000;
 
 connectDB();
 
-app.use(express.urlencoded( {extended: true} ));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cors({origin: `${process.env.CLIENT_URL}`, credentials: true}))
 
 // APIs
 app.use("/api", shopRoutes);

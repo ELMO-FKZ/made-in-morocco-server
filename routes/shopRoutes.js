@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const cors = require("cors");
+// const cors = require("cors");
 const { getProducts, getProduct, getCategoryProducts } = require("../controllers/shopController")
 
 // middleware
-router.use(
-    cors({
-        origin: `${process.env.CLIENT_URL}`,
-        credentials: true,
-    })
-);
+// router.use(
+//     cors({
+//         origin: `${process.env.CLIENT_URL}`,
+//         credentials: true,
+//     })
+// );
 
 // Get all products
 // GET /api/products
