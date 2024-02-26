@@ -36,6 +36,3 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on PORT: ${PORT}`);
 });
-
-// Export the Express API (This line is for vercel deployment)
-module.exports = app;
